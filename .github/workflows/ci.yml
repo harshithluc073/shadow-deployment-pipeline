@@ -25,5 +25,7 @@ jobs:
         pip install pytest-asyncio
 
     - name: Run Tests
+      env:
+        PYTHONPATH: .
       run: |
-        pytest tests/
+        python -m pytest tests/
