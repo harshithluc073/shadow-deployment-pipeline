@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  shadow-pipeline:
+    build: .
+    container_name: shadow_pipeline
+    ports:
+      - "8000:8000"
+    volumes:
+      # Sync the artifacts folder so reports saved in Docker appear locally
+      - ./artifacts:/app/artifacts
